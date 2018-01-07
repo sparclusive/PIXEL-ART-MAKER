@@ -1,0 +1,47 @@
+
+//Grid generation
+function makeGrid(){
+   //Table assignment
+  var canvas = $('#pixel_canvas');
+  //Table Row & Column assignment
+  var cvRow = $('#input_height').val();
+  var cvCol = $('#input_width').val();
+  // Reset the canvas
+  canvas.children().remove();
+  //Generate Table Row
+  for(var r = 0 ; r < cvRow; r++){
+    canvas.append("<tr></tr>");
+      //Generate Table Col
+    for(var c = 0 ; c < cvCol; c++){
+      canvas.children().last().append("<td></td>");   
+    }
+  }
+  //To disable context menu
+  canvas.contextmenu(function(e){
+      return false;
+      });
+  // To color & clear the grid  
+  canvas.on("mousedown", "td", function(e){
+    canvas.on("click mousemove", "td", function(e){
+    if(e.which == 1) {
+      let pickedColr = $('#colorPicker').val();
+      $(this).attr('bgcolor', pickedColr);
+    }else if(e.which == 2 || e.which == 3){
+      $(this).attr('bgcolor', '');
+    }
+    });
+  });
+}
+
+
+  
+// Lol!!! A copy of makeGrid function that's pretending to be a Grid color reset function ;-)
+$('#gridReset').click(function(e){
+  e.preventDefault();
+makeGrid();
+});
+
+$('#cv_submit').click(function(e) {
+  e.preventDefault();
+    makeGrid();
+});

@@ -1,0 +1,110 @@
+body {
+    text-align: center;
+    background-image: url("bg.svg");
+    background-repeat: repeat;
+    
+}
+
+
+
+h2 {
+    font-family: Oswald;
+    margin: 1em 0px .75em 0;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+strong {
+    padding-left: 3%;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+    cursor:crosshair;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 5em;
+}
+
+img {
+    width: auto;
+    height: auto;
+    padding: 7% 5%;
+}
+
+.butt {
+    padding-top: 2%;
+    
+}
+
+input[type=number] {
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+
+.header_pixel {
+    height: 85px;
+    width: 25%;
+    z-index: 2;
+    border-bottom: 2px solid #f1f1f1;
+    background-color: #fff;
+    margin: 1% auto auto 37%;
+    box-shadow: 0 5px 10px rgba(145,145,145,.35);
+}
+
+.pixel_grid {
+    width: 98%;
+    display: contents;
+    margin: 2% 1%;
+    height: relative;
+    z-index: 2;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    border-right: 2px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+    background-color: #fff;
+    padding: 2% 4%;
+    border-radius: 2% 2%;
+    -webkit-box-shadow: 4px 4px 40px 4px rgba(0,0,0,0.4);
+    -moz-box-shadow: 4px 4px 40px 4px rgba(0,0,0,0.4);
+    box-shadow: 4px 4px 40px 4px rgba(0,0,0,0.4);}
+
+a:hover {
+    position: relative;
+}
+a:hover:after {
+    content: url(help.jpg); /* no need for qoutes */
+    display: block;
+    z-index: 99 ;
+    right: 10px; /* change this value to one that suits you */
+    top: 20px; /* change this value to one that suits you */
+}
+
+.side-nav {
+    background: #1c262f;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
